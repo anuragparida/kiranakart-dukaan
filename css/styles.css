@@ -1,0 +1,174 @@
+:root {
+  --primary-background: #eeeeee;
+  --primary-foreground: #000000;
+  --secondary-background: #ffffff;
+  --brand-light: #44ac14;
+  --brand-dark: #047c34;
+}
+
+@font-face {
+  font-family: Work Sans;
+  src: url(../fonts/workR.ttf);
+}
+
+@font-face {
+  font-family: Galano Grotesque DEMO;
+  src: url(../fonts/galano.otf);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--primary-background);
+  font-family: Work Sans;
+}
+
+.heading {
+  font-family: Galano Grotesque DEMO;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.2s;
+}
+
+.nav-logo {
+  position: absolute;
+  left: 20vw;
+}
+
+.nav-links {
+  position: absolute;
+  right: 20vw;
+}
+
+.nav-link {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.nav-link-plain:hover {
+  text-decoration: underline;
+}
+
+.raised-container {
+  background-color: var(--secondary-background);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.watch-video img {
+  width: 25%;
+  margin-right: 10px;
+}
+
+.kfeatures {
+  margin-top: 100px;
+}
+
+.kfeature {
+  margin: 100px 0;
+}
+
+.kfeature-left,
+.ktest-left {
+  left: 0;
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.kfeature-right,
+.ktest-right {
+  right: 0;
+  display: inline-block;
+}
+
+.kfeature-image,
+.ktest-right {
+  width: 40%;
+}
+
+.kfeature-image img,
+.ktest-right img {
+  width: 100%;
+}
+
+.kfeature-image.kfeature-left {
+  margin-left: 10%;
+}
+
+.kfeature-text.kfeature-left {
+  margin-left: 5%;
+  text-align: right;
+}
+
+.kfeature-text,
+.ktest-left {
+  width: 40%;
+  position: relative;
+}
+
+.kfeature-text-ghost {
+  position: absolute;
+  top: -100px;
+  right: 100px;
+  font: 200px Galano Grotesque DEMO;
+  color: #00000015;
+}
+
+.ktest-left {
+  margin-left: 10%;
+}
+
+.ktests {
+  margin-top: 150px;
+}
+
+.ktest {
+  padding: 30px 0 50px;
+}
+
+.ktest-btns {
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+}
+
+.ktest-btns button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 35px;
+  padding: 0 10px;
+}
+
+.color-brand-light {
+  color: var(--brand-light);
+}
+
+.color-brand-dark {
+  color: var(--brand-dark);
+}
+
+.bg-brand-light {
+  background-color: var(--brand-light);
+}
+
+.bg-brand-dark {
+  background-color: var(--brand-dark);
+}
+
+.ktest-text-ghost {
+  top: -50px;
+  right: 150px;
+}
+
+.kcta {
+  margin-top: 150px;
+}

@@ -3510,7 +3510,7 @@ p {
 
 .download-app-banner {
   padding: 48px 0;
-  background-image: url(/images/download-app-banner.jpg);
+  background-image: url(../images/download-app-banner.jpg);
   background-size: cover;
   color: #fff;
 }
@@ -4114,7 +4114,7 @@ p {
 
 .our-values-banner {
   padding: 48px 0;
-  background-image: url(/images/download-app-banner.jpg);
+  background-image: url(images/download-app-banner);
   background-size: cover;
   color: #fff;
 }

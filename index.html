@@ -528,101 +528,61 @@
 
         <!-- Carousel container -->
         <div class="slideshow-container">
-          <div class="mySlides">
+          <!-- Carousel Slide 1 -->
+          <div class="mySlides fade">
             <div>
             <span class="quote-area">
-                <div class="testimonial-item">
-                  <div class="testimonial-info">
-                    <img
-                      src="images/quotes.png"
-                      alt=""
-                      class="c-ico">
-                    <h3>
-                      This may legitimately be the most important app
-                      available. I’m convinced this app is a godsend.
-                      I just wanted to express my gratitude. Thank
-                      you.
-                    </h3>
-                    <div class="testimonial-author-detail">
-                      <span>Pawan Negi</span
-                      ><span class="sub-text"
-                        > Storekeeper @ Patna</span>
-                    </div>
-                  </div>
-                </div>
-              </span>
-            <span class="img-area">
-                <img
-                  src="images/kgraphics/sampleGraphic3x2.png"
-                  alt="Pawan Negi"
-                  class="boss"
-                />
-            </span>
-          </div>
-          </div>
-
-          <div class="mySlides">
-            <div>
-            <span class="quote-area">
-                <div class="testimonial-item">
-                  <div class="testimonial-info">
-                    <img
-                      src="images/quotes.png"
-                      alt=""
-                      class="c-ico">
-                    <h3>
+                    <img src="images/quotes.png" class="c-ico">
+                    <h3 class="text">
                       Dukaan has made it easy for me to sell online
                       through WhatsApp which has given a big boost to
                       my business. Great App. Highly recommended.
                     </h3>
-                    <div class="testimonial-author-detail">
-                      <span>Chirag Gangwani</span
-                      ><span class="sub-text"
-                        >Storekeeper @ Raipur</span
-                      >
+                    <div>
+                      <span>Pawan Negi</span><span class="sub-text"> Storekeeper @ Patna</span>
                     </div>
-                  </div>
-                </div>
-              </span>
-            <span class="img-area">
-                <img
-                  src="images/kgraphics/sampleGraphic3x2.png"
-                  alt="Pawan Negi"
-                  class="boss"
-                />
             </span>
+            <span class="img-area">
+              <img src="images/kgraphics/sampleGraphic3x2.png">
+            </span>
+            </div>
           </div>
-          </div>
-
-          <div class="mySlides">
+          <!-- Carousel Slide 2 -->
+          <div class="mySlides fade">
             <div>
             <span class="quote-area">
-                <div class="testimonial-item">
-                  <div class="testimonial-info">
-                    <img
-                      src="images/quotes.png"
-                      alt=""
-                      class="c-ico">
-                    <h3>
-                      Great place for those who wants to get their
-                      business online. Its as
-                      simple as clicking pictures and uploading it.
-                    </h3>
-                    <div class="testimonial-author-detail">
-                      <span>Shyam Chauhan</span
-                      ><span class="sub-text"
-                        >Storekeeper @ Delhi</span
-                      >
-                    </div>
-                  </div>
+                <img src="images/quotes.png" class="c-ico">
+                <h3 class="text">
+                  This may legitimately be the most important app
+                  available. I’m convinced this app is a godsend.
+                  I just wanted to express my gratitude. Thank
+                  you.
+                </h3>
+                <div>
+                  <span>Pawan Negi</span><span class="sub-text"> Storekeeper @ Patna</span>
                 </div>
-              </span>
+            </span>
             <span class="img-area">
-                <img
-                  src="images/kgraphics/sampleGraphic3x2.png"
-                  alt="Pawan Negi"
-                  class="boss"
-                />
+              <img src="images/kgraphics/sampleGraphic3x2.png">
+            </span>
+            </div>
+          </div>
+          <!-- Carousel Slide 3 -->
+          <div class="mySlides fade">
+            <div>
+            <span class="quote-area">
+                    <img src="images/quotes.png" class="c-ico">
+                    <h3 class="text">
+                      Great place for those who wants to get their
+                      business online. Its as simple as clicking
+                      pictures and uploading it.
+                    </h3>
+                    <div>
+                      <span>Pawan Negi</span><span class="sub-text"> Storekeeper @ Patna</span>
+                    </div>
+            </span>
+            <span class="img-area">
+              <img src="images/kgraphics/sampleGraphic3x2.png">
             </span>
           </div>
           </div>
@@ -639,73 +599,64 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
+      </div>
+      <!-- Carousel script -->
         <script type="text/javascript">
         var slideIndex = 1;
+        var myTimer;
+        window.addEventListener("load",function() {
         showSlides(slideIndex);
-        // Next/previous controls
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
+        myTimer = setInterval(function(){plusSlides(1)}, 4000);
+        slideshowContainer.addEventListener('mouseenter', pause)
+        slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+        function plusSlides(n){
+          clearInterval(myTimer);
+          if (n < 0){
+            showSlides(slideIndex -= 1);
+          } else {
+           showSlides(slideIndex += 1);
+          }
+
+          if (n === -1){
+            myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+          } else {
+            myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+          }
         }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
+        function currentSlide(n){
+          clearInterval(myTimer);
+          myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+          showSlides(slideIndex = n);
         }
 
-        function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        function showSlides(n){
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+
+        pause = () => {
+          clearInterval(myTimer);
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+
+        resume = () =>{
+          clearInterval(myTimer);
+          myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
         }
-        setInterval(plusSlides(slideIndex+1), 4000);
         </script>
-
-        <!-- <section class="kmtestsec">
-          <h2 class="section-header">What our customers are saying</h2>
-          <div>
-          <span class="quote-area">
-              <div class="testimonial-item">
-                <div class="testimonial-info">
-                  <img
-                    src="images/quotes.png"
-                    alt=""
-                    class="c-ico">
-                  <h3>
-                    “This may legitimately be the most important app
-                    available. I’m convinced this app is a godsend.
-                    I just wanted to express my gratitude. Thank
-                    you.”
-                  </h3>
-                  <div class="testimonial-author-detail">
-                    <span>Pawan Negi</span
-                    ><span class="sub-text"
-                      > Storekeeper @ Patna</span>
-                  </div>
-                  <div class="slider-bar">
-                  </div>
-                </div>
-              </div>
-            </span>
-          <span class="img-area">
-              <img
-                src="images/kgraphics/sampleGraphic3x2.png"
-                alt="Pawan Negi"
-                style="height: 45vh;"
-              />
-          </span>
-        </div>
-        </section> -->
 
         <section class="download-app-banner">
           <div class="container">

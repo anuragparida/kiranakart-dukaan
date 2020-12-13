@@ -3266,11 +3266,11 @@ p {
 }
 
 .classic-app-image .bg-app-shape:after {
-  bottom: 3rem;
-  left: -8rem;
+  bottom: 7rem;
+  left: -10rem;
   width: 55rem;
   height: 35rem;
-  border-radius: 20rem;
+  border-radius: 30rem;
   -webkit-transform: rotate(120deg);
   transform: rotate(120deg);
   opacity: 0.9;
@@ -3516,7 +3516,7 @@ p {
   -webkit-box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15);
   box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15);
   background-color: #2f55d4 !important;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .features.fea-primary:hover .icon2,

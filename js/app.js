@@ -68,9 +68,9 @@
     var scroll = $(window).scrollTop();
 
     if (scroll >= 50) {
-      $(".sticky").addClass("nav-sticky");
+      $(".ssticky").addClass("nav-sticky");
     } else {
-      $(".sticky").removeClass("nav-sticky");
+      $(".ssticky").removeClass("nav-sticky");
     }
   });
 

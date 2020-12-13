@@ -3,11 +3,14 @@
     var scroll = $(window).scrollTop();
 
     if (scroll >= 200) {
+      console.log("scroll");
       $(".ksticky").addClass("raised-container position-fixed");
-      $(".nav-logo").css("height", "inherit");
+      // $(".nav-logo").css("height", "inherit");
+      $(".download-app-btn").hide();
     } else {
       $(".ksticky").removeClass("raised-container position-fixed");
-      $(".nav-logo").css("height", "auto");
+      // $(".nav-logo").css("height", "auto");
+      $(".download-app-btn").show();
     }
   });
 

@@ -156,7 +156,7 @@ html {
   font-size: 14px !important;
   line-height: 1.42857143 !important;
   color: #1a181e !important;
-  background-color: #fff !important;
+  background-color: #fff;
   min-height: 500px;
   overflow: auto;
 }
@@ -3048,12 +3048,7 @@ p {
   clear: both;
 }
 
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
 .slick-slide {
-  display: none;
   float: left;
   height: 100%;
   min-height: 1px;
@@ -3108,6 +3103,7 @@ p {
   border-radius: 40px;
   padding: 8px 4px;
   display: inline-flex !important;
+  display: none;
 }
 
 .slick-dots li {
@@ -3538,7 +3534,7 @@ p {
   .download-app-banner {
     padding: 40px 0;
     text-align: center;
-    background-image: url(/images/download-app-banner-mobile.jpg);
+    background-image: url(../images/download-app-banner-mobile.jpg);
   }
   .download-app-banner .download-app-baaner-wrap {
     align-items: center;

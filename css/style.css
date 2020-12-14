@@ -3506,9 +3506,23 @@ p {
 
 .download-app-banner {
   padding: 48px 0;
-  background-image: url(../images/download-app-banner.jpg);
+  /* background: rgb(68, 172, 20);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 172, 20, 1) 0%,
+    rgba(40, 151, 34, 1) 74%,
+    rgba(4, 124, 52, 1) 100%
+  ); */
+  /* background: radial-gradient(
+    circle,
+    rgba(68, 172, 20, 1) 0%,
+    rgba(40, 151, 34, 1) 74%,
+    rgba(4, 124, 52, 1) 100%
+  ); */
+  background-image: url(../images/download-app-banner2.png);
   background-size: cover;
   color: #fff;
+  text-shadow: 1px 1px 10px #555;
 }
 
 .download-app-banner .download-app-baaner-wrap {
@@ -4403,12 +4417,12 @@ p {
   justify-content: space-between;
   font-size: 18px;
   line-height: 26px;
-  padding: 20px 0;
+  padding: 10px 0 20px;
 }
 
 .header .header-container-wrap .logo-link > img {
-  width: 156px;
-  height: 44px;
+  width: 284px;
+  height: 80px;
 }
 
 .header .header-container-wrap .header-actions .sign-in-link {

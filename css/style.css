@@ -3658,6 +3658,13 @@ p {
 .build-business-section .featured-in-section .featured-in-wrap > div {
   padding: 0 20px;
   text-align: center;
+  width: 20%;
+}
+
+.build-business-section .featured-in-section .featured-in-wrap > img {
+  padding: 0 20px;
+  text-align: center;
+  width: inherit;
 }
 
 .build-business-section

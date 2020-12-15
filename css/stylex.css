@@ -2389,16 +2389,25 @@ p {
     padding: 60px 0;
   }
   .title-heading .heading {
-    font-size: 35px !important;
+    /* font-size: 35px !important; */
+    font-size: 30px !important;
   }
   .title-heading .para-desc {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 15px;
   }
   .section-title .title {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 20px;
   }
   .mt-60 {
     margin-top: 60px;
+  }
+  .bg-half-170 .heading {
+    line-height: normal !important;
+  }
+  .header .header-container-wrap {
+    padding: 22px 0 20px;
   }
 }
 
@@ -3419,7 +3428,7 @@ p {
   .main-slider .slides .bg-slider,
   .bg-marketing,
   .swiper-slider-hero .swiper-container .swiper-slide {
-    padding: 150px 0;
+    padding: 220px 0 100px;
     height: auto;
   }
   .agency-wrapper:before {

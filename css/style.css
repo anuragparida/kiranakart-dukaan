@@ -3178,7 +3178,8 @@ p {
 }
 
 .store-features-section .store-features-wrap .store-feature-row {
-  padding-top: 48px;
+  /* padding-top: 48px; */
+  padding-top: 70px;
   margin: 0 -40px;
 }
 
@@ -3522,7 +3523,7 @@ p {
   background-image: url(../images/download-app-banner2.png);
   background-size: cover;
   color: #fff;
-  text-shadow: 1px 1px 10px #555;
+  text-shadow: 1px 1px 10px #222;
 }
 
 .download-app-banner .download-app-baaner-wrap {
@@ -3671,7 +3672,7 @@ p {
 
 @media only screen and (max-width: 768px) {
   .build-business-section {
-    padding: 138px 0 64px;
+    padding: 0px 0 64px;
   }
   .build-business-section .row {
     margin: 0;

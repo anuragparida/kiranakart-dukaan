@@ -96,5 +96,5 @@
     $('[data-toggle="popover"]').popover();
   });
   //Feather icon
-  feather.replace();
+  //feather.replace();
 })(jQuery);
